@@ -30,13 +30,13 @@ INSTALLER_ROOT="$FILE_ROOT/installer"
 
 # will get overwritten by the definitions in shared.sh
 log() {
-    printf "\033[35m[-] INFO:\033(B\033[m $@\n"
-}
-error() {
-    printf "\033[31m[!] ERROR:\033(B\033[m $@\n"
+    printf "\033[35m[ INFO ]\033(B\033[m $@\n"
 }
 warning() {
-    printf "\033[33m[=] WARNING:\033(B\033[m $@\n"
+    printf "\033[33m[ WARN ]\033(B\033[m $@\n"
+}
+error() {
+    printf "\033[31m[ ERR. ]\033(B\033[m $@\n"
 }
 
 if [ $(id -u) -ne 0 ]; then
@@ -61,8 +61,12 @@ if [ ! -e /sbin/init ]; then
     error "/sbin/init not found, cannot hijack."
     exit 1
 fi
+if [ ! -d /boot ]; then
+    error "No /boot partition found. Cannot continue."
+    exit 1
+fi
 if [ ! -d /var/lib/systemd ]; then
-    warning "You are about to hijack a distro which does not use systemd. The hijack might or might not brick your distro."
+    warning "You are about to hijack a distro which does not use systemd. Please note that this configuration is not tested."
     log 'Press enter to continue'
     read
 fi
@@ -128,8 +132,8 @@ if [ -n "$(command -v pacman)" ]; then
     ln -srfnT /arnix/etc/pacman-post.hook /etc/pacman.d/hooks/100-arnix-change-symlink.hook
 fi
 
-# Workaround for Ubuntu
-mkdir -p /var/db
+# Cosmetic fix
+mkdir -p /var/db /opt
 
 log "Creating generation 1"
 mkdir -p /arnix/generations/1

@@ -1,4 +1,6 @@
-if [ -d /arnix ]; then
+#!/usr/bin/env false
+
+if [ -d /arnix/bin/toybox ]; then
     alias ln='/arnix/bin/toybox ln'
     alias sha1sum='/arnix/bin/toybox sha1sum'
 fi
