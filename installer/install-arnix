@@ -28,9 +28,9 @@ if [ -z "$(command -v curl)" ]; then
 fi
 if [ -z $BASE_URL ]; then
     if $use_dev_branch; then
-        BASE_URL='https://raw.githubusercontent.com/GermanBread/Arnix/dev/installer';
+        BASE_URL='https://raw.githubusercontent.com/in-a-dil-emma/Arnix/dev/installer';
     else
-        BASE_URL='https://raw.githubusercontent.com/GermanBread/Arnix/stable/installer';
+        BASE_URL='https://raw.githubusercontent.com/in-a-dil-emma/Arnix/stable/installer';
     fi
 fi
 if [ -z $TARBALL ]; then

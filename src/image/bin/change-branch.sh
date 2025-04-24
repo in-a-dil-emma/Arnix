@@ -25,14 +25,14 @@ echo
 
 case ${_mode} in 
     1)
-        sed -Ei "s,_update_source_tarball=.*,_update_source_tarball=https://raw.githubusercontent.com/GermanBread/Arnix/stable/installer/arnix-bootstrap.tar.gz," /arnix/arnix.conf
-        sed -Ei "s,_update_source_checksum=.*,_update_source_checksum=https://raw.githubusercontent.com/GermanBread/Arnix/stable/installer/arnix-bootstrap.sha1sum," /arnix/arnix.conf
+        sed -Ei "s,_update_source_tarball=.*,_update_source_tarball=https://raw.githubusercontent.com/in-a-dil-emma/Arnix/stable/installer/arnix-bootstrap.tar.gz," /arnix/arnix.conf
+        sed -Ei "s,_update_source_checksum=.*,_update_source_checksum=https://raw.githubusercontent.com/in-a-dil-emma/Arnix/stable/installer/arnix-bootstrap.sha1sum," /arnix/arnix.conf
         sed -Ei "s,_branch_preset=.*,_branch_preset=unstable," /arnix/arnix.conf
         log "Branch changed to 'stable'"
     ;;
     2)
-        sed -Ei "s,_update_source_tarball=.*,_update_source_tarball=https://raw.githubusercontent.com/GermanBread/Arnix/dev/installer/arnix-bootstrap.tar.gz," /arnix/arnix.conf
-        sed -Ei "s,_update_source_checksum=.*,_update_source_checksum=https://raw.githubusercontent.com/GermanBread/Arnix/dev/installer/arnix-bootstrap.sha1sum," /arnix/arnix.conf
+        sed -Ei "s,_update_source_tarball=.*,_update_source_tarball=https://raw.githubusercontent.com/in-a-dil-emma/Arnix/dev/installer/arnix-bootstrap.tar.gz," /arnix/arnix.conf
+        sed -Ei "s,_update_source_checksum=.*,_update_source_checksum=https://raw.githubusercontent.com/in-a-dil-emma/Arnix/dev/installer/arnix-bootstrap.sha1sum," /arnix/arnix.conf
         sed -Ei "s,_branch_preset=.*,_branch_preset=unstable," /arnix/arnix.conf
         log "Branch changed to 'dev'"
     ;;

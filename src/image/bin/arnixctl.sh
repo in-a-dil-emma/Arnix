@@ -25,7 +25,7 @@ _option() {
 
 case $1 in
     status)
-        echo 'Created by https://github.com/GermanBread'
+        echo 'Created by https://github.com/in-a-dil-emma'
         echo
         echo "Active generation: $(readlink /arnix/generations/current)"
         echo

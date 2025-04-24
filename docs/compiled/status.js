@@ -41,14 +41,14 @@ function replaceTemporaryFields() {
             switch (_a.label) {
                 case 0:
                     ticker = document.getElementById("ticker");
-                    return [4 /*yield*/, fetch('https://api.github.com/repos/GermanBread/Arnix/releases/latest')];
+                    return [4 /*yield*/, fetch('https://api.github.com/repos/in-a-dil-emma/Arnix/releases/latest')];
                 case 1:
                     stabledata = _a.sent();
                     return [4 /*yield*/, stabledata.json()];
                 case 2:
                     stablejson = _a.sent();
                     ticker.innerHTML = ticker.innerHTML.replace("%s", stablejson.tag_name.link(stablejson.html_url));
-                    return [4 /*yield*/, fetch('https://api.github.com/repos/GermanBread/Arnix/commits/dev')];
+                    return [4 /*yield*/, fetch('https://api.github.com/repos/in-a-dil-emma/Arnix/commits/dev')];
                 case 3:
                     devdata = _a.sent();
                     return [4 /*yield*/, devdata.json()];

@@ -3,5 +3,5 @@ PRETTY_NAME="Arnix Linux"
 ID=arnix
 BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
-HOME_URL="https://github.com/GermanBread/Arnix"
+HOME_URL="https://github.com/in-a-dil-emma/Arnix"
 LOGO=arnix
