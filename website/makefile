@@ -18,4 +18,4 @@ $(output_scss):
 	sassc -t compressed $@.scss > compiled/$@.css
 
 $(output_ts):
-	tsc --outFile compiled/$@.js $@.ts
+	tsc -t es6 --outFile compiled/$@.js $@.ts

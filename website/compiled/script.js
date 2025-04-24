@@ -1,5 +1,5 @@
-var logoScroll = 60;
-var logoElement;
+let logoScroll = 60;
+let logoElement;
 function init() {
     var _a;
     logoElement = (_a = document.getElementById("logo")) !== null && _a !== void 0 ? _a : document.body; // Stop annoying me VSCode. This is to shut you up
