@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arnix - Arch with generations</title>
+        <link rel="stylesheet" href="compiled/style.css">
+        <script src="compiled/script.js"></script>
+    </head>
+    <body onload="init()">
+        <pre id="logo">
+          :::     :::::::::  ::::    ::: ::::::::::: :::    ::: 
+       :+: :+:   :+:    :+: :+:+:   :+:     :+:     :+:    :+:  
+     +:+   +:+  +:+    +:+ :+:+:+  +:+     +:+      +:+  +:+    
+   +#++:++#++: +#++:++#:  +#+ +:+ +#+     +#+       +#++:+      
+  +#+     +#+ +#+    +#+ +#+  +#+#+#     +#+      +#+  +#+      
+ #+#     #+# #+#    #+# #+#   #+#+#     #+#     #+#    #+#      
+###     ### ###    ### ###    #### ########### ###    ###
+        </pre>
+        <div id="main-view">
+            <h1>Arnix – news</h1>
+            <a href="index.html">Take me back!</a>
+            <hr>
+            <div id="content-view v3-1">
+                <h2>Small release v3.1</h2>
+                <p>Git branch for stable!</p>
+                <br>
+                <h2>Features</h2>
+                <p>The stable branch is now a git branch. I can push updates directly to the branch instead of doing a release</p>
+                <p>you can invoke a emergency shell by adding "arnix.emergency" to kernel parameters</p>
+                <h2>Bugfixes</h2>
+                <p>More GRUB-EFI fixes when reverting the hijack (your system could become unbootable)</p>
+            </div>
+            <hr>
+            <div id="content-view v3">
+                <h2>Major release v3!</h2>
+                <p>Moar stability!!!</p>
+                <br>
+                <h2>Features</h2>
+                <p>I made the updating process incredibly reliable. No more fear of the updater misbehaving!</p>
+                <p>you can invoke a emergency shell by adding "arnix.emergency" to kernel parameters</p>
+                <p>'arnixctl edit' has been added for simplicity sake</p>
+                <h2>Bugfixes</h2>
+                <p>init hooks should no longer cause emergency shells to be invoked</p>
+                <p>GRUB symlink should update from now on</p>
+                <h2>Changes</h2>
+                <p>"rollback" kernel parameter has been renamed to "arnix.rollback"</p>
+            </div>
+            <hr>
+            <div id="content-view v2-2">
+                <h2>Bugfix v2.2!</h2>
+                <p>More reliability improvements!</p>
+            </div>
+            <hr>
+            <div id="content-view v2-1">
+                <h2>Small v2.1 update!</h2>
+                <p>This small release features some changes which should make Arnix more reliable.</p>
+            </div>
+            <hr>
+            <div id="content-view v2">
+                <h2>v2 is out!</h2>
+                <i>I feel like I was on the verge of a burnout</i>
+                <p>Anyways, this release features automated update merging! (and a LOT of under-the-hood changes)</p>
+                <br>
+                <h3>Note</h3>
+                <p>Updating might fail because I misconfigured cURL in v1 (sorry).</p>
+                <p>But don't worry; I have a fix for you!</p>
+                <br>
+                <p>Run <code>sed -i 's,curl -s,curl -L,gm' /arnix/bin/update-arnix.sh</code> <b>as root</b></p>
+                <br>
+                <p>Now run <code>arnixctl update</code> again</p>
+            </div>
+            <hr>
+            <div id="content-view v1">
+                <h2>First ever release of Arnix saw the light of day!</h2>
+                <p>After months of hard work I can announce the first stable release of Arnix!</p>
+                <p>There were a few breaking changes on the way (but that's to be expected)</p>
+                <br>
+                <p>If you don't know what Arnix does, <a href="https://github.com/in-a-dil-emma/Arnix/wiki">take a look at the wiki</a></p>
+            </div>
+        </div>
+    </body>
+</html>
