@@ -1,3 +1,7 @@
 [submodule "wiki"]
 	path = wiki
 	url = https://github.com/in-a-dil-emma/Arnix.wiki.git
+[submodule "website"]
+	path = website
+	branch = website
+	url = https://github.com/in-a-dil-emma/Arnix.git
