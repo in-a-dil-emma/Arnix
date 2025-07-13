@@ -1,6 +1,7 @@
 files_scss := $(wildcard *.scss)
-output_scss := $(foreach file,$(files_scss),$(shell basename -s .scss $(file)))
 files_ts := $(wildcard *.ts)
+
+output_scss := $(foreach file,$(files_scss),$(shell basename -s .scss $(file)))
 output_ts := $(foreach file,$(files_ts),$(shell basename -s .ts $(file)))
 
 all:
@@ -8,6 +9,7 @@ all:
 	@make $(output_scss)
 	@make $(output_ts)
 
+.PHONY: deploy
 deploy: all
 	rm -rf ../docs/*
 	cp -r compiled ../docs/compiled

@@ -9,7 +9,7 @@
         <script src="compiled/status.js"></script>
         <script src="compiled/script.js"></script>
     </head>
-    <body onload="init(); replaceTemporaryFields()">
+    <body onload="init();replaceTemporaryFields()">
         <pre id="logo">
           :::     :::::::::  ::::    ::: ::::::::::: :::    ::: 
        :+: :+:   :+:    :+: :+:+:   :+:     :+:     :+:    :+:  
@@ -25,15 +25,28 @@
             <hr>
             <div id="content-view">
                 <h2>Current branches:</h2>
-                <span id="ticker">stable (%s), unstable (%g)</span>
-                <br>
+                <p id="ticker">stable (%s), unstable (%g)</p>
                 <h2>Activity report</h2>
-                <span>Currently trying to get Arnix working smoothly on other distros</span>
-                <br>
+                <p>Nothing.</p>
                 <h2>Compatibility</h2>
-                <span>Tested: Garuda, Manjaro and Arch</span><br>
-                <span>In testing: Ubuntu</span>
-                <span>Others <i>might</i> work too</span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tested and working</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Garuda</td>
+                        </tr>
+                        <tr>
+                            <td>Manjaro</td>
+                        </tr>
+                        <tr>
+                            <td>Arch Linux</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>
